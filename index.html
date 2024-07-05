@@ -6,9 +6,97 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Calorias quemadas</title>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="row g-3">
+            <div class="col-12 mt-3 informacion">
+                <h1>Calorias quemadas en ejercicio</h1>
+                <h3>¿Qué es la estimación de calorías quemadas en ejercicio?</h3>
+                <p>
+                    Es un cálculo que nos permite estimar cuántas calorías quema una persona al realizar actividad física, en este caso, caminar o correr.
+                </p>
+                <p>¿Para que sirve?</p>
+                <ul>
+                    <li>Ayuda a las personas a entender el gasto energético de sus actividades</li>
+                    <li>Es útil para planificar rutinas de ejercicio y dietas</li>
+                    <li>Permite comparar la intensidad de diferentes actividades</li>
+                </ul>
+                <p>
+                    Cómo se aplica: Usaremos una fórmula simplificada: <br />
+                    <strong>Calorías = MET * 3.5 * peso (kg) * (tiempo en minutos / 200)</strong>
+                </p>
+                <hr />
+                <p>Donde:</p>
+                <ul>
+                    <li>
+                        MET (Metabolic Equivalent of Task) es una medida de intensidad
+                        <ul>
+                            <li>Caminar = 3.5 MET</li>
+                            <li>Correr = 8.0 MET</li>
+                        </ul>
+                    </li>
+                    <li>3.5 es una constante relacionada con el consumo de oxígeno en reposo.</li>
+                    <li>Peso es el peso de la persona en kilogramos.</li>
+                    <li>Tiempo es la duración del ejercicio en minutos.</li>
+                </ul>
+                <p>Ejemplo práctico: Una persona de 70 kg camina durante 30 minutos.</p>
+                <p>Calorías = 3.5 * 3.5 * 70 * (30 / 200) = 128.63 calorías</p>
+            </div>
+        </div>
+        <div class="row g-3">
+            <form action="#" method="post" onsubmit="procesarFormulario(event)">
+                <div class="mb-3">
+                    <label for="nombre-usuario" class="form-label">Nombre: </label>
+                    <input type="text"
+                           class="form-control"
+                           id="nombre-usuario"
+                           aria-describedby="ayudaUsuario"
+                    >
+                    <div id="ayudaUsuario" class="form-text">Coloca tu nombre aqui</div>
+                </div>
+                <div class="mb-3">
+                    <label for="peso" class="form-label">Peso: </label>
+                    <input type="number"
+                           class="form-control"
+                           id="peso"
+                           aria-describedby="ayudaPeso"
+                           min="1"
+                           max="120"
+                    >
+                    <div id="ayudaPeso" class="form-text">Coloca tu peso (KG) aqui. Peso minimo y maximo (1-120 kg)</div>
+                </div>
+                <div class="mb-3">
+                    <label for="tiempo" class="form-label">tiempo: </label>
+                    <input type="number"
+                           class="form-control"
+                           id="tiempo"
+                           aria-describedby="ayudaTiempo"
+                           min="5"
+                           max="150"
+                    >
+                    <div id="ayudaTiempo" class="form-text">Coloca el tiempo (MIN) que realizara. timepo minimo y maximo (5 - 150 min)</div>
+                </div>
+                <div class="mb-3">
+                    <h5>Actividad a realizar: </h5>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="caminar" value="option1" checked>
+                        <label class="form-check-label" for="caminar">Caminar</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="correr" value="option2">
+                        <label class="form-check-label" for="correr">Correr</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <button class="btn btn-primary" type="submit">Enviar formulario</button>
+                </div>
+            </form>
+        </div>
+    </div>
+<script src="assets/js/formulario.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
