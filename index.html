@@ -47,53 +47,58 @@
             </div>
         </div>
         <div class="row g-3">
-            <form action="#" method="post" onsubmit="procesarFormulario(event)">
-                <div class="mb-3">
-                    <label for="nombre-usuario" class="form-label">Nombre: </label>
-                    <input type="text"
-                           class="form-control"
-                           id="nombre-usuario"
-                           aria-describedby="ayudaUsuario"
-                    >
-                    <div id="ayudaUsuario" class="form-text">Coloca tu nombre aqui</div>
-                </div>
-                <div class="mb-3">
-                    <label for="peso" class="form-label">Peso: </label>
-                    <input type="number"
-                           class="form-control"
-                           id="peso"
-                           aria-describedby="ayudaPeso"
-                           min="1"
-                           max="120"
-                    >
-                    <div id="ayudaPeso" class="form-text">Coloca tu peso (KG) aqui. Peso minimo y maximo (1-120 kg)</div>
-                </div>
-                <div class="mb-3">
-                    <label for="tiempo" class="form-label">tiempo: </label>
-                    <input type="number"
-                           class="form-control"
-                           id="tiempo"
-                           aria-describedby="ayudaTiempo"
-                           min="5"
-                           max="150"
-                    >
-                    <div id="ayudaTiempo" class="form-text">Coloca el tiempo (MIN) que realizara. timepo minimo y maximo (5 - 150 min)</div>
-                </div>
-                <div class="mb-3">
-                    <h5>Actividad a realizar: </h5>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="caminar" value="option1" checked>
-                        <label class="form-check-label" for="caminar">Caminar</label>
+            <div class="col-12 mt-3 mb-2">
+                <form action="#" method="post" onsubmit="procesarFormulario(event)">
+                    <div class="mb-3">
+                        <label for="nombre_usuario" class="form-label">Nombre: </label>
+                        <input type="text"
+                               class="form-control"
+                               id="nombre_usuario"
+                               aria-describedby="ayudaUsuario"
+                        >
+                        <div id="ayudaUsuario" class="form-text">Coloca tu nombre aqui</div>
                     </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="correr" value="option2">
-                        <label class="form-check-label" for="correr">Correr</label>
+                    <div class="mb-3">
+                        <label for="peso" class="form-label">Peso: </label>
+                        <input type="number"
+                               class="form-control"
+                               id="peso"
+                               aria-describedby="ayudaPeso"
+                        >
+                        <div id="ayudaPeso" class="form-text">Coloca tu peso (KG) aqui. Peso minimo y maximo (1-120 kg)</div>
                     </div>
+                    <div class="mb-3">
+                        <label for="tiempo" class="form-label">tiempo: </label>
+                        <input type="number"
+                               class="form-control"
+                               id="tiempo"
+                               aria-describedby="ayudaTiempo"
+                        >
+                        <div id="ayudaTiempo" class="form-text">Coloca el tiempo (MIN) que realizara. timepo minimo y maximo (5 - 150 min)</div>
+                    </div>
+                    <div class="mb-3" id="actividad">
+                        <h5>Actividad a realizar: </h5>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="caminar" value="option1" checked>
+                            <label class="form-check-label" for="caminar">Caminar</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="correr" value="option2">
+                            <label class="form-check-label" for="correr">Correr</label>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <button class="btn btn-primary" type="submit">Enviar formulario</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row g-3">
+            <div class="col-12 mt-3">
+                <div class="alert alert-info" role="alert" id="resultado">
+                    Esperando resultado...
                 </div>
-                <div class="col">
-                    <button class="btn btn-primary" type="submit">Enviar formulario</button>
-                </div>
-            </form>
+            </div>
         </div>
     </div>
 <script src="assets/js/formulario.js"></script>
